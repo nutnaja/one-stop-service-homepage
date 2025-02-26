@@ -9,30 +9,29 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # เพิ่มสิทธิ์ให้เขียนไฟล์ได้
+      contents: write
 
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # ดึงข้อมูลทั้งหมด รวมถึง history
+          fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: "18"
-          cache: "npm" # เพิ่ม cache เพื่อเร่งความเร็ว
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
       - name: List project files
         run: ls -la
 
       - name: Build and Generate static files
         run: |
-          npm run build
-          npm run generate
+          bun run build
+          bun run generate
           echo "Checking output directory:"
           ls -la .output/public || ls -la dist
 
@@ -41,5 +40,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: .output/public # หรือ dist ขึ้นอยู่กับการตรวจสอบในขั้นตอนก่อนหน้า
-          clean: true # ล้างไฟล์เก่าก่อน deploy
+          folder: .output/public
+          clean: true
