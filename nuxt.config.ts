@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     "@/assets/css/main.css",
   ],
   app: {
+    baseURL: '/one-stop-service-homepage/' ,
     head: {
       title: 'G-ONE Tire Shop',
       meta: [
