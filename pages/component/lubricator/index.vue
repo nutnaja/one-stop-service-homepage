@@ -1,0 +1,11 @@
+<template>
+    <div>
+        <h1>หน้าน้ำมันเครื่อง</h1>
+        <v-btn
+        text="กลับ"
+        to="/"
+        color="primary"
+      >
+    </v-btn>
+    </div>
+</template>

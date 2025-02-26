@@ -1,0 +1,13 @@
+<template>
+    <div>
+        <h1>หน้ายาง</h1>
+        <v-btn
+        text="กลับ"
+        to="/"
+        color="primary"
+      >
+      </v-btn>
+
+    </div>
+</template>
+

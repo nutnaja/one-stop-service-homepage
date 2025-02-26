@@ -1,0 +1,33 @@
+.card-orange {
+    background-color:#E65100; 
+}
+
+.card-dark {
+    background-color:#212121;
+}
+
+.card-border-orange {
+    border: 2px solid #E65100;
+}
+
+.card-border-orange-none-top {
+    border: 2px solid #E65100;
+    border-top: none;
+}
+
+.text-layer1 {
+    font-size: 18;
+    font-weight: 800;
+}
+
+.text-oranges  {
+    color: #E65100; 
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+

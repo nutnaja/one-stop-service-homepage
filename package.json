@@ -1,0 +1,33 @@
+{
+  "name": "one-stop-service",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prepare": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "nuxt": "^3.15.4",
+    "vue": "latest",
+    "vue-router": "latest",
+    "vuetify": "^3.7.13"
+  },
+  "devDependencies": {
+    "@mdi/font": "^7.4.47",
+    "@nuxt/fonts": "^0.10.0",
+    "sass-embedded": "^1.80.3",
+    "typescript": "^5.6.3",
+    "vite-plugin-vuetify": "^2.1.0",
+    "vue-tsc": "^2.1.6",
+    "vuetify-nuxt-module": "^0.18.3",
+    "@types/bun": "latest"
+  },
+  "module": "index.ts"
+}
